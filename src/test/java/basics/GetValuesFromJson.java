@@ -16,19 +16,19 @@ public class GetValuesFromJson {
 		
 		RestAssured.baseURI = "https://reqres.in";
 		
-Response response = given()
+		Response response = given()
 		
-					.when()
+							.when()
 		
-					.get("api/users?page=2")
+							.get("api/users?page=2")
 		
-					.then()
+							.then()
 					
-					.log().all()
+							.log().all()
 		
-					.extract()
+							.extract()
 		
-					.response();
+							.response();
 
 
 					JsonPath jp = response.jsonPath();
@@ -42,6 +42,19 @@ Response response = given()
 				String emailforid0 = jp.getString("data[3].email");
 				
 				System.out.println(emailforid0);
+				
+				int numberofelements = jp.getInt("data.size()");
+		
+				System.out.println("number of elements are"+numberofelements);
+				
+				
+				for(int i=0; i<6; i++)
+				{
+				String firstname = jp.getString("data["+i+"].first_name");
+				
+				System.out.println(firstname);
+				}
+				
 	}
 
 }

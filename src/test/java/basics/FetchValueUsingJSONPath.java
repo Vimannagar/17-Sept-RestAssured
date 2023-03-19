@@ -8,9 +8,7 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class ExtractValueFromResponse {
-	
-	
+public class FetchValueUsingJSONPath {
 	
 	@Test
 	public void getEmailValue()
@@ -34,17 +32,14 @@ RestAssured.baseURI = "https://reqres.in/";
 							.response();
 		
 		
-		JsonPath jp = response.jsonPath();
+		String stringresponse = response.asPrettyString();
+		
+		JsonPath jp = new JsonPath(stringresponse);
 		
 		String emailvalue = jp.getString("data.email");
 		
 		System.out.println("Email value is "+emailvalue);
 		
-		
-	
-		
-		
-		
-	}
 
+	}
 }
