@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-19T07:59:13 IST" name="Default suite" finished-at="2023-03-19T07:59:18 IST" duration-ms="5537">
+  <suite started-at="2023-03-20T07:59:54 IST" name="Default suite" finished-at="2023-03-20T08:00:08 IST" duration-ms="14596">
     <groups>
     </groups>
-    <test started-at="2023-03-19T07:59:13 IST" name="Default test" finished-at="2023-03-19T07:59:18 IST" duration-ms="5537">
-      <class name="basics.POST_Request">
-        <test-method signature="createUser()[pri:0, instance:basics.POST_Request@4a7f959b]" started-at="2023-03-19T07:59:13 IST" name="createUser" finished-at="2023-03-19T07:59:18 IST" duration-ms="5425" status="PASS">
+    <test started-at="2023-03-20T07:59:54 IST" name="Default test" finished-at="2023-03-20T08:00:08 IST" duration-ms="14596">
+      <class name="basics.APIChaining">
+        <test-method signature="createUser()[pri:1, instance:basics.APIChaining@429bffaa]" started-at="2023-03-20T07:59:54 IST" name="createUser" finished-at="2023-03-20T08:00:06 IST" duration-ms="12658" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUser -->
-      </class> <!-- basics.POST_Request -->
+        <test-method signature="getDetails()[pri:2, instance:basics.APIChaining@429bffaa]" started-at="2023-03-20T08:00:06 IST" name="getDetails" finished-at="2023-03-20T08:00:08 IST" duration-ms="1795" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDetails -->
+      </class> <!-- basics.APIChaining -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
